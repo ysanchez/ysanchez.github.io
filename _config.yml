@@ -1,3 +1,4 @@
 name: Yannelly Sanchez, Python for Data Science
 markdown: kramdown
 Theme: Midnight
+permalink: /blog/:year/:month/:day/:title
