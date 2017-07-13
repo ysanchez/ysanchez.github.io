@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Advanced Regression Logist Regression
+title: Advanced Regression Logistic Regression
 ---
 
 <html>
