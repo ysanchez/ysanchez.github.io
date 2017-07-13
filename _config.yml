@@ -1,4 +1,4 @@
 theme: jekyll-theme-midnight
 name: Yannelly Sanchez, Data Science
-markdown: kramdown
+markdown: Kramdown
 permalink: /blog/:year/:month/:day/:title
