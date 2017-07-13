@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Yannelly Sanchez, Advanced Regression
-date: 2017-07-12
+date: '2017-07-13'
 ---
 
  ## Advanced Regression Housing Prediction
