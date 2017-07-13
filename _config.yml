@@ -2,4 +2,4 @@ theme: jekyll-theme-midnight
 name: Yannelly Sanchez, Data Science
 markdown: Kramdown
 permalink: /blog/:year/:month/:day/:title
-include:- "_img"
+- "_img"
