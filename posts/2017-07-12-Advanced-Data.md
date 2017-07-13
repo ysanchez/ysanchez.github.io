@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Yannelly Sanchez, Advanced Regression"
+title: Yannelly Sanchez, Advanced Regression
 date: 2017-07-12
 ---
 
