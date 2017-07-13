@@ -296,7 +296,7 @@ th {
 .glyphicon-cloud:before {
   content: "\2601";
 }
-.glyphicon-envelope:before {
+.glyphicon-envelope:before { 
   content: "\2709";
 }
 .glyphicon-pencil:before {
