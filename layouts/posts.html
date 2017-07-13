@@ -1,19 +1,9 @@
-<!DOCTYPE html>
-<html lang="en">
+---
+layout: default
+---
+<h1>{{ page.title }}</h1>
 
-  {% include head.html %}
 
-  {% include header.html %}
-
-  <body>
-    <section class="post-wrapper">
-      <p class="post-date">{{ page.date }}</p>
-    </section>
-    <h1 class="post-title">Building a blog using Jekyll. Creating custom layouts</h1>
-    <article class="post-content">
-      {{content}}
-    </article>
-  </body>
-
-  {% include footer.html %}
-</html>
+<div class="post">
+  {{ content }}
+</div>
