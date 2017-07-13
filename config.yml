@@ -1,2 +1,3 @@
 name: Yannelly Sanchez, Data Science
 markdown: kramdown
+permalink: /blog/:year/:month/:day/:title
