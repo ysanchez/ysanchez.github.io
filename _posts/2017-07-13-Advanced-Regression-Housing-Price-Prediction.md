@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Advanced Regression Housing Predicion
+title: Advanced Regression Housing Price Prediction
 ---
 
 <html>
