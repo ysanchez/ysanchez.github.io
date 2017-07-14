@@ -1,5 +1,4 @@
 
-
 <html>
 
 <head>
@@ -131,8 +130,8 @@ window.mathjax_url = "/static/components/MathJax/MathJax.js";
  
 data-base-url="/"
 data-ws-url=""
-data-notebook-name="Advance%20regression%20housing%20prediction%20modified%20data%20files.ipynb"
-data-notebook-path="Google%20Drive/python%20assignment/Advanced%20regression%20housing%20price/Advance%20regression%20housing%20prediction%20modified%20data%20files.ipynb"
+data-notebook-name="data%20advanced%20regression%20final%20MD%20File.ipynb"
+data-notebook-path="Google%20Drive/python%20assignment/Advanced%20regression%20housing%20price/data%20advanced%20regression%20final%20MD%20File.ipynb"
 
 dir="ltr">
 
