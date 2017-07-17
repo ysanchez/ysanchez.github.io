@@ -5,10 +5,8 @@ title: About
 
 Born and raised in Southern California and continues to live in Southern California.
 
-I have a BA in Psychology and a MA in Forensic Psychology. I have taken additional courses in crime analysis. I began learning Python approximetly two years ago.
+I am currently an analyst at a money whire transfer company in Buena Park, CA. When possible, I will use python to complete projects at work. I find Python easier to use and better able to handle large amounts of data than Excel (my opinion).
 
-I do get to use Python sometimes at work when excel isn't sufficient for me or co-workers. I am currently looking for a more suitible position where I am better ablt to use my skills.
+I primarily use Python during kaggle competitions. I get to focus on projects and subjects that interest me. It also provides a lot of practice. Data Science classes also give us additional projects that we must work on. Overall, I spend the majority of my day working on one or two Data Science project.
 
-but I primarily use it during kaggle competitions. Data Science classes also give us additional competition.
-
-I love Python and Data Science and the challenges it brings. I enjoy solving everyday problems with python. It defintely keeps you on your toes.
+I love Python and Data Science and the challenges it brings. I enjoy solving everyday problems and providing valuable information to those that need it.
