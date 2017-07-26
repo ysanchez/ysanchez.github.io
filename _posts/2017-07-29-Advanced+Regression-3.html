@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Advanced Regression Housing Prediction
+title: House Prices: Advanced Regression
 ---
 
 <!DOCTYPE html>
@@ -8456,15 +8456,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -11238,7 +11238,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -11681,7 +11681,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -11737,14 +11737,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -11783,14 +11783,15 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h1 id="First-Notebook">First Notebook<a class="anchor-link" href="#First-Notebook">&#182;</a></h1><p><strong>I combined the train and test data set so the columns remain equal and to keep control of the changes. You want to make sure that the exact changes made in the train dataset is made in the test dataset.</strong></p>
+<h3 id="House-Prices">House Prices<a class="anchor-link" href="#House-Prices">&#182;</a></h3><p><strong> This is a kaggle competition. <a href="https://www.kaggle.com/c/house-prices-advanced-regression-techniques">https://www.kaggle.com/c/house-prices-advanced-regression-techniques</a>. Click on the link to get access to the training dataset and test dataset. GOOD LUCK!!</strong></p>
+<p><strong>I combined the train and test data set so the columns remain equal and to keep control of the changes. You want to make sure that the exact changes made in the train dataset is made in the test dataset.</strong></p>
 
 </div>
 </div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[2]:</div>
+<div class="prompt input_prompt">In&nbsp;[1]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="kn">import</span> <span class="nn">pandas</span> <span class="kn">as</span> <span class="nn">pd</span>
@@ -11811,7 +11812,7 @@ div#notebook {
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[2]:</div>
+<div class="prompt output_prompt">Out[1]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12001,7 +12002,7 @@ div#notebook {
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[3]:</div>
+<div class="prompt input_prompt">In&nbsp;[2]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -12125,7 +12126,7 @@ memory usage: 1.8+ MB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
+<div class="prompt input_prompt">In&nbsp;[3]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;BldgType&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -12140,7 +12141,7 @@ memory usage: 1.8+ MB
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[8]:</div>
+<div class="prompt output_prompt">Out[3]:</div>
 
 
 
@@ -12171,7 +12172,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[9]:</div>
+<div class="prompt input_prompt">In&nbsp;[4]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;BsmtFinType1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -12186,7 +12187,7 @@ dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[9]:</div>
+<div class="prompt output_prompt">Out[4]:</div>
 
 
 
@@ -12208,7 +12209,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[7]:</div>
+<div class="prompt input_prompt">In&nbsp;[5]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;BsmtCond&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -12223,7 +12224,7 @@ dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[7]:</div>
+<div class="prompt output_prompt">Out[5]:</div>
 
 
 
@@ -12243,45 +12244,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[8]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;BsmtExposure&#39;</span><span class="p">)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;BsmtQual&#39;</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>Growing up Southern California Central Air is very important. I actually have it on as i write this.</strong></p>
-
-</div>
-</div>
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[10]:</div>
-<div class="inner_cell">
-    <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;CentralAir&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;CentralAir&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;CentralAir&#39;</span><span class="p">],</span> <span class="n">drop_first</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-</pre></div>
-
-</div>
-</div>
-</div>
-
-</div>
-<div class="cell border-box-sizing code_cell rendered">
-<div class="input">
-<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="prompt input_prompt">In&nbsp;[6]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Condition1&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -12296,7 +12259,7 @@ dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[11]:</div>
+<div class="prompt output_prompt">Out[6]:</div>
 
 
 
@@ -12321,7 +12284,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[7]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Electrical&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -12336,7 +12299,7 @@ dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[12]:</div>
+<div class="prompt output_prompt">Out[7]:</div>
 
 
 
@@ -12357,21 +12320,43 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[12]:</div>
+<div class="prompt input_prompt">In&nbsp;[8]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;ExterCond&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;ExterQual&#39;</span><span class="p">)</span>
 </pre></div>
 
 </div>
 </div>
 </div>
 
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[8]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>TA    2538
+Gd     299
+Fa      67
+Ex      12
+Po       3
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[13]:</div>
+<div class="prompt input_prompt">In&nbsp;[9]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Exterior1st&#39;</span><span class="p">])</span>
@@ -12386,7 +12371,7 @@ dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt output_prompt">Out[9]:</div>
 
 
 
@@ -12417,7 +12402,7 @@ Name: Exterior1st, dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[10]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Fence&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -12432,7 +12417,7 @@ Name: Exterior1st, dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[14]:</div>
+<div class="prompt output_prompt">Out[10]:</div>
 
 
 
@@ -12452,7 +12437,42 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[11]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Fence&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Fence&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;No&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Fence&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Fence&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;Yes&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span>  <span class="o">==</span> <span class="s2">&quot;MnPrv&quot;</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">==</span> <span class="s1">&#39;GdPrv&#39;</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">==</span><span class="s1">&#39;GdWo&#39;</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">==</span> <span class="s1">&#39;MnWw&#39;</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;No&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="s1">&#39;Yes&#39;</span> <span class="k">else</span> <span class="n">x</span> <span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Fence&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span> <span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+<div class="output_wrapper">
+<div class="output">
+
+
+<div class="output_area">
+<div class="prompt output_prompt">Out[11]:</div>
+
+
+
+<div class="output_text output_subarea output_execute_result">
+<pre>No     2348
+Yes     571
+dtype: int64</pre>
+</div>
+
+</div>
+
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[12]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Functional&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -12467,7 +12487,7 @@ dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[12]:</div>
 
 
 
@@ -12494,6 +12514,7 @@ dtype: int64</pre>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
 <p><strong>There were mulitple columns for garage. Instead of using every single one I decided to engineer the variables to 'yes' and 'no'</strong></p>
+<p><strong> I did the same with the column "Alley" and "Fence" </strong></p>
 
 </div>
 </div>
@@ -12506,7 +12527,21 @@ dtype: int64</pre>
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;GarageCond&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 <span class="n">data</span><span class="p">[</span><span class="s1">&#39;GarageCond&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;GarageCond&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;No&#39;</span><span class="p">)</span>
 <span class="n">data</span><span class="p">[</span><span class="s1">&#39;GarageCond&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;GarageCond&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;Yes&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">!=</span> <span class="s1">&#39;No&#39;</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
-<span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;GarageCond&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Alley&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Alley&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;No&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Alley&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;Alley&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;Yes&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s1">&#39;Grvl&#39;</span> <span class="ow">or</span> <span class="n">x</span> <span class="o">==</span> <span class="s1">&#39;Pave&#39;</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
+<span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Alley&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span> <span class="o">=</span><span class="bp">True</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12518,13 +12553,13 @@ dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[13]:</div>
+<div class="prompt output_prompt">Out[14]:</div>
 
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>Yes    2760
-No      159
+<pre>No     2721
+Yes     198
 dtype: int64</pre>
 </div>
 
@@ -12536,10 +12571,10 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[14]:</div>
+<div class="prompt input_prompt">In&nbsp;[15]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span><span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;GarageFinish&#39;</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span><span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;GarageFinish&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12549,7 +12584,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[15]:</div>
+<div class="prompt input_prompt">In&nbsp;[16]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Heating&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -12564,7 +12599,7 @@ dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[15]:</div>
+<div class="prompt output_prompt">Out[16]:</div>
 
 
 
@@ -12584,9 +12619,34 @@ dtype: int64</pre>
 </div>
 
 </div>
+<div class="cell border-box-sizing text_cell rendered">
+<div class="prompt input_prompt">
+</div>
+<div class="inner_cell">
+<div class="text_cell_render border-box-sizing rendered_html">
+<p><strong>Growing up Southern California Central Air is very important. I actually have it on as I write this.</strong></p>
+
+</div>
+</div>
+</div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[16]:</div>
+<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="inner_cell">
+    <div class="input_area">
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;CentralAir&#39;</span><span class="p">]</span> <span class="o">=</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;CentralAir&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">astype</span><span class="p">(</span><span class="nb">str</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;CentralAir&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;CentralAir&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="s1">&#39;No&#39;</span><span class="p">)</span>
+<span class="n">data</span><span class="p">[</span><span class="s1">&#39;CentralAir&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="n">data</span><span class="p">[</span><span class="s1">&#39;CentralAir&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;Yes&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span> <span class="o">==</span> <span class="s1">&#39;0&#39;</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span><span class="o">.</span><span class="n">apply</span><span class="p">(</span><span class="k">lambda</span> <span class="n">x</span><span class="p">:</span> <span class="n">x</span><span class="o">.</span><span class="n">replace</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="s1">&#39;No&#39;</span><span class="p">)</span> <span class="k">if</span> <span class="n">x</span><span class="o">==</span><span class="s1">&#39;1&#39;</span> <span class="k">else</span> <span class="n">x</span><span class="p">)</span>
+</pre></div>
+
+</div>
+</div>
+</div>
+
+</div>
+<div class="cell border-box-sizing code_cell rendered">
+<div class="input">
+<div class="prompt input_prompt">In&nbsp;[18]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;KitchenQual&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
@@ -12601,7 +12661,7 @@ dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[16]:</div>
+<div class="prompt output_prompt">Out[18]:</div>
 
 
 
@@ -12621,7 +12681,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[17]:</div>
+<div class="prompt input_prompt">In&nbsp;[19]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;LandContour&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -12636,7 +12696,7 @@ dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[17]:</div>
+<div class="prompt output_prompt">Out[19]:</div>
 
 
 
@@ -12666,7 +12726,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[18]:</div>
+<div class="prompt input_prompt">In&nbsp;[20]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;PoolQC&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -12684,7 +12744,7 @@ dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[18]:</div>
+<div class="prompt output_prompt">Out[20]:</div>
 
 
 
@@ -12702,7 +12762,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[19]:</div>
+<div class="prompt input_prompt">In&nbsp;[21]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;RoofMatl&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -12717,7 +12777,7 @@ dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[19]:</div>
+<div class="prompt output_prompt">Out[21]:</div>
 
 
 
@@ -12741,7 +12801,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[20]:</div>
+<div class="prompt input_prompt">In&nbsp;[22]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;SaleCondition&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -12756,7 +12816,7 @@ dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[20]:</div>
+<div class="prompt output_prompt">Out[22]:</div>
 
 
 
@@ -12778,7 +12838,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[21]:</div>
+<div class="prompt input_prompt">In&nbsp;[23]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">pd</span><span class="o">.</span><span class="n">value_counts</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Utilities&#39;</span><span class="p">]</span><span class="o">.</span><span class="n">values</span><span class="p">,</span> <span class="n">sort</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -12793,7 +12853,7 @@ dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[21]:</div>
+<div class="prompt output_prompt">Out[23]:</div>
 
 
 
@@ -12822,7 +12882,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[26]:</div>
+<div class="prompt input_prompt">In&nbsp;[24]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">get_dummies</span><span class="p">(</span><span class="n">data</span><span class="p">,</span> <span class="n">drop_first</span><span class="o">=</span><span class="bp">True</span><span class="p">)</span>
@@ -12845,17 +12905,14 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[27]:</div>
+<div class="prompt input_prompt">In&nbsp;[25]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span><span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Functional&#39;</span><span class="p">)</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;BedroomAbvGr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;BedroomAbvGr&#39;</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;BedroomAbvGr&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;BedroomAbvGr&#39;</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">data</span><span class="p">[</span><span class="s1">&#39;BsmtFullBath&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;BsmtFullBath&#39;</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">data</span><span class="p">[</span><span class="s1">&#39;BsmtHalfBath&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;BsmtHalfBath&#39;</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">data</span><span class="p">[</span><span class="s1">&#39;FullBath&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;FullBath&#39;</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;Fireplaces&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;Fireplaces&#39;</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
 <span class="n">data</span><span class="p">[</span><span class="s1">&#39;GarageCars&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;GarageCars&#39;</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
-<span class="n">data</span><span class="p">[</span><span class="s1">&#39;SaleType_New&#39;</span><span class="p">]</span> <span class="o">=</span> <span class="nb">pow</span><span class="p">(</span><span class="n">data</span><span class="p">[</span><span class="s1">&#39;SaleType_New&#39;</span><span class="p">],</span> <span class="mi">2</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -12865,7 +12922,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[28]:</div>
+<div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">data</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
@@ -12880,7 +12937,7 @@ dtype: int64</pre>
 
 
 <div class="output_area">
-<div class="prompt output_prompt">Out[28]:</div>
+<div class="prompt output_prompt">Out[26]:</div>
 
 
 <div class="output_html rendered_html output_subarea output_execute_result">
@@ -12911,7 +12968,7 @@ dtype: int64</pre>
       <th>BsmtFullBath</th>
       <th>BsmtHalfBath</th>
       <th>BsmtUnfSF</th>
-      <th>CentralAir</th>
+      <th>EnclosedPorch</th>
       <th>...</th>
       <th>SaleType_CWD</th>
       <th>SaleType_Con</th>
@@ -12937,7 +12994,7 @@ dtype: int64</pre>
       <td>1.0</td>
       <td>0.0</td>
       <td>150.0</td>
-      <td>1</td>
+      <td>0</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -12961,7 +13018,7 @@ dtype: int64</pre>
       <td>0.0</td>
       <td>1.0</td>
       <td>284.0</td>
-      <td>1</td>
+      <td>0</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -12985,7 +13042,7 @@ dtype: int64</pre>
       <td>1.0</td>
       <td>0.0</td>
       <td>434.0</td>
-      <td>1</td>
+      <td>0</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -13009,7 +13066,7 @@ dtype: int64</pre>
       <td>1.0</td>
       <td>0.0</td>
       <td>540.0</td>
-      <td>1</td>
+      <td>272</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -13033,7 +13090,7 @@ dtype: int64</pre>
       <td>1.0</td>
       <td>0.0</td>
       <td>490.0</td>
-      <td>1</td>
+      <td>0</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -13048,7 +13105,7 @@ dtype: int64</pre>
     </tr>
   </tbody>
 </table>
-<p>5 rows × 243 columns</p>
+<p>5 rows × 239 columns</p>
 </div>
 </div>
 
@@ -13070,7 +13127,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[29]:</div>
+<div class="prompt input_prompt">In&nbsp;[27]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">train</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">iloc</span><span class="p">[:</span><span class="mi">1460</span><span class="p">]</span>
@@ -13094,7 +13151,7 @@ dtype: int64</pre>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[30]:</div>
+<div class="prompt input_prompt">In&nbsp;[28]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">train</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -13116,9 +13173,9 @@ dtype: int64</pre>
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 Int64Index: 1460 entries, 0 to 1459
-Columns: 243 entries, 1stFlrSF to Utilities_NoSeWa
-dtypes: float64(12), int64(26), uint8(205)
-memory usage: 737.1 KB
+Columns: 239 entries, 1stFlrSF to Utilities_NoSeWa
+dtypes: float64(12), int64(26), uint8(201)
+memory usage: 731.4 KB
 </pre>
 </div>
 </div>
@@ -13139,7 +13196,7 @@ memory usage: 737.1 KB
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
-<div class="prompt input_prompt">In&nbsp;[31]:</div>
+<div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">test</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -13161,9 +13218,9 @@ memory usage: 737.1 KB
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 Int64Index: 1459 entries, 0 to 1458
-Columns: 243 entries, 1stFlrSF to Utilities_NoSeWa
-dtypes: float64(12), int64(26), uint8(205)
-memory usage: 736.6 KB
+Columns: 239 entries, 1stFlrSF to Utilities_NoSeWa
+dtypes: float64(12), int64(26), uint8(201)
+memory usage: 730.9 KB
 </pre>
 </div>
 </div>
@@ -13177,7 +13234,7 @@ memory usage: 736.6 KB
 <div class="prompt input_prompt">In&nbsp;[&nbsp;]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span> 
+<div class=" highlight hl-ipython2"><pre><span></span>
 </pre></div>
 
 </div>
@@ -13189,11 +13246,13 @@ memory usage: 736.6 KB
   </div>
 </body>
 
- 
+
 
 
 </html>
-<!DOCTYPE html>
+
+
+
 <html>
 <head><meta charset="utf-8" />
 <title>2017-07-13-Advanced Regression</title><script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.1.10/require.min.js"></script>
@@ -21646,15 +21705,15 @@ label {
 }
 /* Flexible box model classes */
 /* Taken from Alex Russell http://infrequently.org/2009/08/css-3-progress/ */
-/* This file is a compatability layer.  It allows the usage of flexible box 
+/* This file is a compatability layer.  It allows the usage of flexible box
 model layouts accross multiple browsers, including older browsers.  The newest,
 universal implementation of the flexible box model is used when available (see
-`Modern browsers` comments below).  Browsers that are known to implement this 
+`Modern browsers` comments below).  Browsers that are known to implement this
 new spec completely include:
 
     Firefox 28.0+
     Chrome 29.0+
-    Internet Explorer 11+ 
+    Internet Explorer 11+
     Opera 17.0+
 
 Browsers not listed, including Safari, are supported via the styling under the
@@ -24428,7 +24487,7 @@ div#pager .ui-resizable-handle {
   background: #f7f7f7;
   border-top: 1px solid #cfcfcf;
   border-bottom: 1px solid #cfcfcf;
-  /* This injects handle bars (a short, wide = symbol) for 
+  /* This injects handle bars (a short, wide = symbol) for
         the resize handle. */
 }
 div#pager .ui-resizable-handle::after {
@@ -24871,7 +24930,7 @@ ul.typeahead-list > li > a {
 .highlight .il { color: #666666 } /* Literal.Number.Integer.Long */
     </style>
 <style type="text/css">
-    
+
 /* Temporary definitions which will become obsolete with Notebook release 5.0 */
 .ansi-black-fg { color: #3E424D; }
 .ansi-black-bg { background-color: #3E424D; }
@@ -24927,14 +24986,14 @@ div#notebook {
   div.cell {
     display: block;
     page-break-inside: avoid;
-  } 
-  div.output_wrapper { 
-    display: block;
-    page-break-inside: avoid; 
   }
-  div.output { 
+  div.output_wrapper {
     display: block;
-    page-break-inside: avoid; 
+    page-break-inside: avoid;
+  }
+  div.output {
+    display: block;
+    page-break-inside: avoid;
   }
 }
 </style>
@@ -24987,7 +25046,6 @@ div#notebook {
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="kn">as</span> <span class="nn">np</span>
 
 <span class="n">train</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;train data.csv&#39;</span><span class="p">)</span>
-<span class="n">train</span> <span class="o">=</span> <span class="n">train</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">train</span> <span class="o">=</span><span class="n">train</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Id&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">train</span><span class="o">.</span><span class="n">head</span><span class="p">()</span>
 </pre></div>
@@ -25023,6 +25081,7 @@ div#notebook {
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>Unnamed: 0</th>
       <th>1stFlrSF</th>
       <th>2ndFlrSF</th>
       <th>3SsnPorch</th>
@@ -25032,7 +25091,6 @@ div#notebook {
       <th>BsmtFullBath</th>
       <th>BsmtHalfBath</th>
       <th>BsmtUnfSF</th>
-      <th>CentralAir</th>
       <th>...</th>
       <th>SaleType_CWD</th>
       <th>SaleType_Con</th>
@@ -25049,6 +25107,7 @@ div#notebook {
   <tbody>
     <tr>
       <th>0</th>
+      <td>0</td>
       <td>856</td>
       <td>854</td>
       <td>0</td>
@@ -25058,7 +25117,6 @@ div#notebook {
       <td>1.0</td>
       <td>0.0</td>
       <td>150.0</td>
-      <td>1</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -25073,6 +25131,7 @@ div#notebook {
     </tr>
     <tr>
       <th>1</th>
+      <td>1</td>
       <td>1262</td>
       <td>0</td>
       <td>0</td>
@@ -25082,7 +25141,6 @@ div#notebook {
       <td>0.0</td>
       <td>1.0</td>
       <td>284.0</td>
-      <td>1</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -25097,6 +25155,7 @@ div#notebook {
     </tr>
     <tr>
       <th>2</th>
+      <td>2</td>
       <td>920</td>
       <td>866</td>
       <td>0</td>
@@ -25106,7 +25165,6 @@ div#notebook {
       <td>1.0</td>
       <td>0.0</td>
       <td>434.0</td>
-      <td>1</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -25121,6 +25179,7 @@ div#notebook {
     </tr>
     <tr>
       <th>3</th>
+      <td>3</td>
       <td>961</td>
       <td>756</td>
       <td>0</td>
@@ -25130,7 +25189,6 @@ div#notebook {
       <td>1.0</td>
       <td>0.0</td>
       <td>540.0</td>
-      <td>1</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -25145,6 +25203,7 @@ div#notebook {
     </tr>
     <tr>
       <th>4</th>
+      <td>4</td>
       <td>1145</td>
       <td>1053</td>
       <td>0</td>
@@ -25154,7 +25213,6 @@ div#notebook {
       <td>1.0</td>
       <td>0.0</td>
       <td>490.0</td>
-      <td>1</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -25169,7 +25227,7 @@ div#notebook {
     </tr>
   </tbody>
 </table>
-<p>5 rows × 242 columns</p>
+<p>5 rows × 239 columns</p>
 </div>
 </div>
 
@@ -25228,6 +25286,7 @@ div#notebook {
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>Unnamed: 0</th>
       <th>1stFlrSF</th>
       <th>2ndFlrSF</th>
       <th>3SsnPorch</th>
@@ -25237,7 +25296,6 @@ div#notebook {
       <th>BsmtFullBath</th>
       <th>BsmtHalfBath</th>
       <th>BsmtUnfSF</th>
-      <th>CentralAir</th>
       <th>...</th>
       <th>SaleType_CWD</th>
       <th>SaleType_Con</th>
@@ -25253,7 +25311,32 @@ div#notebook {
   </thead>
   <tbody>
     <tr>
+      <th>Unnamed: 0</th>
+      <td>1.000000</td>
+      <td>0.010496</td>
+      <td>0.005590</td>
+      <td>-0.046635</td>
+      <td>0.035800</td>
+      <td>-0.005024</td>
+      <td>-0.005968</td>
+      <td>-0.004211</td>
+      <td>-0.016688</td>
+      <td>-0.007940</td>
+      <td>...</td>
+      <td>0.021204</td>
+      <td>-0.016301</td>
+      <td>-0.004412</td>
+      <td>-0.058765</td>
+      <td>-0.020738</td>
+      <td>-0.018998</td>
+      <td>0.038920</td>
+      <td>0.026133</td>
+      <td>0.008916</td>
+      <td>0.013324</td>
+    </tr>
+    <tr>
       <th>1stFlrSF</th>
+      <td>0.010496</td>
       <td>1.000000</td>
       <td>-0.202646</td>
       <td>0.056104</td>
@@ -25263,7 +25346,6 @@ div#notebook {
       <td>0.238363</td>
       <td>0.002471</td>
       <td>0.317987</td>
-      <td>0.146953</td>
       <td>...</td>
       <td>0.033381</td>
       <td>0.007559</td>
@@ -25278,6 +25360,7 @@ div#notebook {
     </tr>
     <tr>
       <th>2ndFlrSF</th>
+      <td>0.005590</td>
       <td>-0.202646</td>
       <td>1.000000</td>
       <td>-0.024358</td>
@@ -25287,7 +25370,6 @@ div#notebook {
       <td>-0.152625</td>
       <td>-0.029120</td>
       <td>0.004469</td>
-      <td>-0.011803</td>
       <td>...</td>
       <td>0.007628</td>
       <td>0.003778</td>
@@ -25302,6 +25384,7 @@ div#notebook {
     </tr>
     <tr>
       <th>3SsnPorch</th>
+      <td>-0.046635</td>
       <td>0.056104</td>
       <td>-0.024358</td>
       <td>1.000000</td>
@@ -25311,7 +25394,6 @@ div#notebook {
       <td>-0.004511</td>
       <td>0.029822</td>
       <td>0.020764</td>
-      <td>0.030692</td>
       <td>...</td>
       <td>-0.006098</td>
       <td>-0.004309</td>
@@ -25326,6 +25408,7 @@ div#notebook {
     </tr>
     <tr>
       <th>BedroomAbvGr</th>
+      <td>0.035800</td>
       <td>0.136324</td>
       <td>0.497711</td>
       <td>-0.026945</td>
@@ -25335,7 +25418,6 @@ div#notebook {
       <td>-0.111115</td>
       <td>0.045787</td>
       <td>0.149744</td>
-      <td>-0.021231</td>
       <td>...</td>
       <td>0.030047</td>
       <td>-0.028730</td>
@@ -25350,6 +25432,7 @@ div#notebook {
     </tr>
     <tr>
       <th>BsmtFinSF1</th>
+      <td>-0.005024</td>
       <td>0.445863</td>
       <td>-0.137079</td>
       <td>0.026451</td>
@@ -25359,7 +25442,6 @@ div#notebook {
       <td>0.611558</td>
       <td>0.060164</td>
       <td>-0.495251</td>
-      <td>0.166468</td>
       <td>...</td>
       <td>0.008951</td>
       <td>0.030694</td>
@@ -25374,6 +25456,7 @@ div#notebook {
     </tr>
     <tr>
       <th>BsmtFinSF2</th>
+      <td>-0.005968</td>
       <td>0.097117</td>
       <td>-0.099260</td>
       <td>-0.029993</td>
@@ -25383,7 +25466,6 @@ div#notebook {
       <td>0.128686</td>
       <td>0.059713</td>
       <td>-0.209294</td>
-      <td>0.039936</td>
       <td>...</td>
       <td>0.076364</td>
       <td>-0.010691</td>
@@ -25398,6 +25480,7 @@ div#notebook {
     </tr>
     <tr>
       <th>BsmtFullBath</th>
+      <td>-0.004211</td>
       <td>0.238363</td>
       <td>-0.152625</td>
       <td>-0.004511</td>
@@ -25407,7 +25490,6 @@ div#notebook {
       <td>1.000000</td>
       <td>-0.119617</td>
       <td>-0.380957</td>
-      <td>0.101755</td>
       <td>...</td>
       <td>-0.016173</td>
       <td>0.088571</td>
@@ -25422,6 +25504,7 @@ div#notebook {
     </tr>
     <tr>
       <th>BsmtHalfBath</th>
+      <td>-0.016688</td>
       <td>0.002471</td>
       <td>-0.029120</td>
       <td>0.029822</td>
@@ -25431,7 +25514,6 @@ div#notebook {
       <td>-0.119617</td>
       <td>1.000000</td>
       <td>-0.083167</td>
-      <td>0.038275</td>
       <td>...</td>
       <td>0.036786</td>
       <td>-0.008258</td>
@@ -25446,6 +25528,7 @@ div#notebook {
     </tr>
     <tr>
       <th>BsmtUnfSF</th>
+      <td>-0.007940</td>
       <td>0.317987</td>
       <td>0.004469</td>
       <td>0.020764</td>
@@ -25455,7 +25538,6 @@ div#notebook {
       <td>-0.380957</td>
       <td>-0.083167</td>
       <td>1.000000</td>
-      <td>0.020060</td>
       <td>...</td>
       <td>-0.028685</td>
       <td>-0.012681</td>
@@ -25469,31 +25551,8 @@ div#notebook {
       <td>-0.012639</td>
     </tr>
     <tr>
-      <th>CentralAir</th>
-      <td>0.146953</td>
-      <td>-0.011803</td>
-      <td>0.030692</td>
-      <td>-0.021231</td>
-      <td>0.166468</td>
-      <td>0.039936</td>
-      <td>0.101755</td>
-      <td>0.038275</td>
-      <td>0.020060</td>
-      <td>1.000000</td>
-      <td>...</td>
-      <td>-0.039299</td>
-      <td>0.009771</td>
-      <td>-0.085660</td>
-      <td>0.015465</td>
-      <td>-0.079604</td>
-      <td>0.079661</td>
-      <td>0.011971</td>
-      <td>-0.037373</td>
-      <td>0.069869</td>
-      <td>0.006907</td>
-    </tr>
-    <tr>
       <th>EnclosedPorch</th>
+      <td>0.002889</td>
       <td>-0.065292</td>
       <td>0.061989</td>
       <td>-0.037305</td>
@@ -25503,7 +25562,6 @@ div#notebook {
       <td>-0.053614</td>
       <td>-0.011195</td>
       <td>-0.002538</td>
-      <td>-0.156913</td>
       <td>...</td>
       <td>-0.018834</td>
       <td>-0.013308</td>
@@ -25518,30 +25576,31 @@ div#notebook {
     </tr>
     <tr>
       <th>Fireplaces</th>
-      <td>0.378195</td>
-      <td>0.146402</td>
-      <td>-0.006341</td>
-      <td>0.082470</td>
-      <td>0.291254</td>
-      <td>0.058855</td>
-      <td>0.165326</td>
-      <td>0.013884</td>
-      <td>-0.007214</td>
-      <td>0.138629</td>
+      <td>-0.019772</td>
+      <td>0.410531</td>
+      <td>0.194561</td>
+      <td>0.011257</td>
+      <td>0.092830</td>
+      <td>0.260011</td>
+      <td>0.046921</td>
+      <td>0.126672</td>
+      <td>0.023805</td>
+      <td>0.051575</td>
       <td>...</td>
-      <td>0.031896</td>
-      <td>0.038435</td>
-      <td>-0.030948</td>
-      <td>-0.009616</td>
-      <td>0.000448</td>
-      <td>0.024405</td>
-      <td>-0.030815</td>
-      <td>-0.007497</td>
-      <td>-0.029901</td>
-      <td>0.004695</td>
+      <td>0.031474</td>
+      <td>0.022241</td>
+      <td>-0.034179</td>
+      <td>-0.001184</td>
+      <td>0.017009</td>
+      <td>0.066107</td>
+      <td>-0.043163</td>
+      <td>-0.027264</td>
+      <td>-0.005348</td>
+      <td>0.015721</td>
     </tr>
     <tr>
       <th>FullBath</th>
+      <td>0.002752</td>
       <td>0.386723</td>
       <td>0.436593</td>
       <td>0.029302</td>
@@ -25551,7 +25610,6 @@ div#notebook {
       <td>-0.027273</td>
       <td>-0.041978</td>
       <td>0.283160</td>
-      <td>0.104650</td>
       <td>...</td>
       <td>0.014768</td>
       <td>-0.005304</td>
@@ -25566,6 +25624,7 @@ div#notebook {
     </tr>
     <tr>
       <th>GarageArea</th>
+      <td>0.017634</td>
       <td>0.489782</td>
       <td>0.138347</td>
       <td>0.035087</td>
@@ -25575,7 +25634,6 @@ div#notebook {
       <td>0.140714</td>
       <td>-0.028726</td>
       <td>0.183303</td>
-      <td>0.230741</td>
       <td>...</td>
       <td>-0.038068</td>
       <td>0.012220</td>
@@ -25590,6 +25648,7 @@ div#notebook {
     </tr>
     <tr>
       <th>GarageCars</th>
+      <td>0.016103</td>
       <td>0.456408</td>
       <td>0.190211</td>
       <td>0.019470</td>
@@ -25599,7 +25658,6 @@ div#notebook {
       <td>0.106398</td>
       <td>-0.022507</td>
       <td>0.250375</td>
-      <td>0.170837</td>
       <td>...</td>
       <td>-0.039236</td>
       <td>0.004583</td>
@@ -25614,6 +25672,7 @@ div#notebook {
     </tr>
     <tr>
       <th>GarageYrBlt</th>
+      <td>0.013491</td>
       <td>0.166642</td>
       <td>0.064402</td>
       <td>0.029401</td>
@@ -25623,7 +25682,6 @@ div#notebook {
       <td>0.002365</td>
       <td>-0.004503</td>
       <td>0.042720</td>
-      <td>0.265618</td>
       <td>...</td>
       <td>0.009940</td>
       <td>0.010801</td>
@@ -25638,6 +25696,7 @@ div#notebook {
     </tr>
     <tr>
       <th>GrLivArea</th>
+      <td>0.008273</td>
       <td>0.566024</td>
       <td>0.687501</td>
       <td>0.020643</td>
@@ -25647,7 +25706,6 @@ div#notebook {
       <td>0.044656</td>
       <td>-0.022963</td>
       <td>0.240257</td>
-      <td>0.093666</td>
       <td>...</td>
       <td>0.030312</td>
       <td>0.008287</td>
@@ -25662,6 +25720,7 @@ div#notebook {
     </tr>
     <tr>
       <th>HalfBath</th>
+      <td>0.006784</td>
       <td>-0.119916</td>
       <td>0.609707</td>
       <td>-0.004972</td>
@@ -25671,7 +25730,6 @@ div#notebook {
       <td>-0.007462</td>
       <td>0.001547</td>
       <td>-0.041118</td>
-      <td>0.134637</td>
       <td>...</td>
       <td>-0.013854</td>
       <td>0.045466</td>
@@ -25686,6 +25744,7 @@ div#notebook {
     </tr>
     <tr>
       <th>KitchenAbvGr</th>
+      <td>0.002951</td>
       <td>0.068101</td>
       <td>0.059306</td>
       <td>-0.024600</td>
@@ -25695,7 +25754,6 @@ div#notebook {
       <td>0.025907</td>
       <td>-0.058649</td>
       <td>0.030086</td>
-      <td>-0.246797</td>
       <td>...</td>
       <td>-0.011083</td>
       <td>-0.007832</td>
@@ -25710,6 +25768,7 @@ div#notebook {
     </tr>
     <tr>
       <th>LotArea</th>
+      <td>-0.033226</td>
       <td>0.299475</td>
       <td>0.050986</td>
       <td>0.020423</td>
@@ -25719,7 +25778,6 @@ div#notebook {
       <td>0.227786</td>
       <td>0.038502</td>
       <td>-0.002618</td>
-      <td>0.049755</td>
       <td>...</td>
       <td>-0.007818</td>
       <td>-0.002872</td>
@@ -25734,6 +25792,7 @@ div#notebook {
     </tr>
     <tr>
       <th>LotFrontage</th>
+      <td>-0.019761</td>
       <td>0.245181</td>
       <td>0.042549</td>
       <td>0.023499</td>
@@ -25743,7 +25802,6 @@ div#notebook {
       <td>0.029931</td>
       <td>-0.028578</td>
       <td>0.160829</td>
-      <td>-0.011683</td>
       <td>...</td>
       <td>0.014939</td>
       <td>-0.006010</td>
@@ -25758,6 +25816,7 @@ div#notebook {
     </tr>
     <tr>
       <th>LowQualFinSF</th>
+      <td>-0.044230</td>
       <td>-0.014241</td>
       <td>0.063353</td>
       <td>-0.004296</td>
@@ -25767,7 +25826,6 @@ div#notebook {
       <td>-0.042304</td>
       <td>-0.006376</td>
       <td>0.028167</td>
-      <td>-0.050149</td>
       <td>...</td>
       <td>-0.006302</td>
       <td>-0.004453</td>
@@ -25782,6 +25840,7 @@ div#notebook {
     </tr>
     <tr>
       <th>MSSubClass</th>
+      <td>0.011156</td>
       <td>-0.251758</td>
       <td>0.307886</td>
       <td>-0.043825</td>
@@ -25791,7 +25850,6 @@ div#notebook {
       <td>0.023578</td>
       <td>0.009469</td>
       <td>-0.140759</td>
-      <td>-0.101774</td>
       <td>...</td>
       <td>0.028636</td>
       <td>0.028994</td>
@@ -25806,6 +25864,7 @@ div#notebook {
     </tr>
     <tr>
       <th>MasVnrArea</th>
+      <td>-0.051071</td>
       <td>0.339850</td>
       <td>0.173800</td>
       <td>0.019144</td>
@@ -25815,7 +25874,6 @@ div#notebook {
       <td>0.059590</td>
       <td>0.027440</td>
       <td>0.113862</td>
-      <td>0.126409</td>
       <td>...</td>
       <td>-0.017731</td>
       <td>-0.021139</td>
@@ -25830,6 +25888,7 @@ div#notebook {
     </tr>
     <tr>
       <th>MiscVal</th>
+      <td>-0.006242</td>
       <td>-0.021096</td>
       <td>0.016197</td>
       <td>0.000354</td>
@@ -25839,7 +25898,6 @@ div#notebook {
       <td>-0.016241</td>
       <td>-0.007392</td>
       <td>-0.023837</td>
-      <td>-0.002478</td>
       <td>...</td>
       <td>-0.004596</td>
       <td>-0.003248</td>
@@ -25854,6 +25912,7 @@ div#notebook {
     </tr>
     <tr>
       <th>MoSold</th>
+      <td>0.021172</td>
       <td>0.031372</td>
       <td>0.035164</td>
       <td>0.029474</td>
@@ -25863,7 +25922,6 @@ div#notebook {
       <td>-0.028738</td>
       <td>0.027816</td>
       <td>0.034888</td>
-      <td>0.009846</td>
       <td>...</td>
       <td>0.003454</td>
       <td>-0.011263</td>
@@ -25878,6 +25936,7 @@ div#notebook {
     </tr>
     <tr>
       <th>OpenPorchSF</th>
+      <td>-0.000477</td>
       <td>0.211671</td>
       <td>0.208026</td>
       <td>-0.005842</td>
@@ -25887,7 +25946,6 @@ div#notebook {
       <td>0.055175</td>
       <td>-0.028273</td>
       <td>0.129005</td>
-      <td>0.025858</td>
       <td>...</td>
       <td>-0.021098</td>
       <td>-0.005122</td>
@@ -25902,6 +25960,7 @@ div#notebook {
     </tr>
     <tr>
       <th>OverallCond</th>
+      <td>0.012609</td>
       <td>-0.144203</td>
       <td>0.028942</td>
       <td>0.025504</td>
@@ -25911,7 +25970,6 @@ div#notebook {
       <td>-0.054147</td>
       <td>0.098780</td>
       <td>-0.136841</td>
-      <td>0.118969</td>
       <td>...</td>
       <td>0.031788</td>
       <td>-0.019156</td>
@@ -25926,6 +25984,7 @@ div#notebook {
     </tr>
     <tr>
       <th>OverallQual</th>
+      <td>-0.028365</td>
       <td>0.476224</td>
       <td>0.295493</td>
       <td>0.030371</td>
@@ -25935,7 +25994,6 @@ div#notebook {
       <td>0.084653</td>
       <td>-0.032511</td>
       <td>0.308159</td>
-      <td>0.272038</td>
       <td>...</td>
       <td>0.034147</td>
       <td>0.037524</td>
@@ -25950,6 +26008,7 @@ div#notebook {
     </tr>
     <tr>
       <th>PoolArea</th>
+      <td>0.057044</td>
       <td>0.131525</td>
       <td>0.081487</td>
       <td>-0.007992</td>
@@ -25959,7 +26018,6 @@ div#notebook {
       <td>0.076760</td>
       <td>0.016983</td>
       <td>-0.035092</td>
-      <td>0.018122</td>
       <td>...</td>
       <td>-0.003600</td>
       <td>-0.002544</td>
@@ -25998,6 +26056,7 @@ div#notebook {
     </tr>
     <tr>
       <th>PavedDrive_P</th>
+      <td>0.022269</td>
       <td>-0.062613</td>
       <td>0.012140</td>
       <td>-0.016851</td>
@@ -26007,7 +26066,6 @@ div#notebook {
       <td>-0.055867</td>
       <td>0.021285</td>
       <td>0.024459</td>
-      <td>-0.079237</td>
       <td>...</td>
       <td>-0.007592</td>
       <td>-0.005364</td>
@@ -26022,6 +26080,7 @@ div#notebook {
     </tr>
     <tr>
       <th>PavedDrive_Y</th>
+      <td>-0.000355</td>
       <td>0.163848</td>
       <td>-0.040082</td>
       <td>0.022902</td>
@@ -26031,7 +26090,6 @@ div#notebook {
       <td>0.092340</td>
       <td>0.029823</td>
       <td>-0.015493</td>
-      <td>0.325482</td>
       <td>...</td>
       <td>0.015685</td>
       <td>0.011083</td>
@@ -26046,6 +26104,7 @@ div#notebook {
     </tr>
     <tr>
       <th>PoolQC_Yes</th>
+      <td>0.055511</td>
       <td>0.146727</td>
       <td>0.090073</td>
       <td>-0.008075</td>
@@ -26055,7 +26114,6 @@ div#notebook {
       <td>0.089494</td>
       <td>0.021204</td>
       <td>-0.037279</td>
-      <td>0.018311</td>
       <td>...</td>
       <td>-0.003638</td>
       <td>-0.002571</td>
@@ -26070,6 +26128,7 @@ div#notebook {
     </tr>
     <tr>
       <th>RoofMatl_CompShg</th>
+      <td>0.013775</td>
       <td>-0.190345</td>
       <td>-0.010648</td>
       <td>-0.007307</td>
@@ -26079,7 +26138,6 @@ div#notebook {
       <td>-0.114261</td>
       <td>-0.104081</td>
       <td>0.022127</td>
-      <td>-0.014526</td>
       <td>...</td>
       <td>0.007058</td>
       <td>0.004987</td>
@@ -26094,6 +26152,7 @@ div#notebook {
     </tr>
     <tr>
       <th>RoofMatl_Membran</th>
+      <td>-0.028481</td>
       <td>0.013574</td>
       <td>-0.020818</td>
       <td>-0.003046</td>
@@ -26103,7 +26162,6 @@ div#notebook {
       <td>0.022216</td>
       <td>-0.005837</td>
       <td>-0.027930</td>
-      <td>0.006907</td>
       <td>...</td>
       <td>-0.001372</td>
       <td>-0.000970</td>
@@ -26118,6 +26176,7 @@ div#notebook {
     </tr>
     <tr>
       <th>RoofMatl_Metal</th>
+      <td>-0.037860</td>
       <td>-0.011830</td>
       <td>-0.020818</td>
       <td>0.113083</td>
@@ -26127,7 +26186,6 @@ div#notebook {
       <td>0.022216</td>
       <td>-0.005837</td>
       <td>-0.033620</td>
-      <td>0.006907</td>
       <td>...</td>
       <td>-0.001372</td>
       <td>-0.000970</td>
@@ -26142,6 +26200,7 @@ div#notebook {
     </tr>
     <tr>
       <th>RoofMatl_Roll</th>
+      <td>0.033885</td>
       <td>-0.015895</td>
       <td>0.038697</td>
       <td>-0.003046</td>
@@ -26151,7 +26210,6 @@ div#notebook {
       <td>-0.018176</td>
       <td>-0.005837</td>
       <td>0.008343</td>
-      <td>0.006907</td>
       <td>...</td>
       <td>-0.001372</td>
       <td>-0.000970</td>
@@ -26166,6 +26224,7 @@ div#notebook {
     </tr>
     <tr>
       <th>RoofMatl_Tar&amp;Grv</th>
+      <td>0.010271</td>
       <td>0.071021</td>
       <td>-0.023777</td>
       <td>-0.010137</td>
@@ -26175,7 +26234,6 @@ div#notebook {
       <td>0.037273</td>
       <td>0.156375</td>
       <td>-0.047352</td>
-      <td>-0.009128</td>
       <td>...</td>
       <td>-0.004567</td>
       <td>-0.003227</td>
@@ -26190,6 +26248,7 @@ div#notebook {
     </tr>
     <tr>
       <th>RoofMatl_WdShake</th>
+      <td>-0.010835</td>
       <td>0.096561</td>
       <td>0.009270</td>
       <td>-0.006820</td>
@@ -26199,7 +26258,6 @@ div#notebook {
       <td>0.049744</td>
       <td>-0.013070</td>
       <td>0.011726</td>
-      <td>0.015465</td>
       <td>...</td>
       <td>-0.003073</td>
       <td>-0.002171</td>
@@ -26214,6 +26272,7 @@ div#notebook {
     </tr>
     <tr>
       <th>RoofMatl_WdShngl</th>
+      <td>-0.033633</td>
       <td>0.117333</td>
       <td>0.032092</td>
       <td>-0.007473</td>
@@ -26223,7 +26282,6 @@ div#notebook {
       <td>0.071029</td>
       <td>0.025282</td>
       <td>0.031765</td>
-      <td>0.016947</td>
       <td>...</td>
       <td>-0.003367</td>
       <td>-0.002379</td>
@@ -26238,6 +26296,7 @@ div#notebook {
     </tr>
     <tr>
       <th>RoofStyle_Gable</th>
+      <td>-0.030540</td>
       <td>-0.314131</td>
       <td>0.086670</td>
       <td>-0.029938</td>
@@ -26247,7 +26306,6 @@ div#notebook {
       <td>-0.080428</td>
       <td>-0.029263</td>
       <td>-0.027912</td>
-      <td>-0.005086</td>
       <td>...</td>
       <td>-0.003996</td>
       <td>0.019583</td>
@@ -26262,6 +26320,7 @@ div#notebook {
     </tr>
     <tr>
       <th>RoofStyle_Gambrel</th>
+      <td>-0.024046</td>
       <td>-0.061752</td>
       <td>0.071027</td>
       <td>-0.010137</td>
@@ -26271,7 +26330,6 @@ div#notebook {
       <td>-0.036051</td>
       <td>0.009874</td>
       <td>0.004991</td>
-      <td>-0.073356</td>
       <td>...</td>
       <td>-0.004567</td>
       <td>-0.003227</td>
@@ -26286,6 +26344,7 @@ div#notebook {
     </tr>
     <tr>
       <th>RoofStyle_Hip</th>
+      <td>0.040840</td>
       <td>0.323994</td>
       <td>-0.113568</td>
       <td>0.030141</td>
@@ -26295,7 +26354,6 @@ div#notebook {
       <td>0.078014</td>
       <td>-0.001522</td>
       <td>0.044537</td>
-      <td>0.025256</td>
       <td>...</td>
       <td>0.007146</td>
       <td>-0.018280</td>
@@ -26310,6 +26368,7 @@ div#notebook {
     </tr>
     <tr>
       <th>RoofStyle_Mansard</th>
+      <td>-0.029043</td>
       <td>0.000529</td>
       <td>0.073463</td>
       <td>-0.008075</td>
@@ -26319,7 +26378,6 @@ div#notebook {
       <td>-0.048189</td>
       <td>0.021204</td>
       <td>0.010849</td>
-      <td>-0.021891</td>
       <td>...</td>
       <td>-0.003638</td>
       <td>-0.002571</td>
@@ -26334,6 +26392,7 @@ div#notebook {
     </tr>
     <tr>
       <th>RoofStyle_Shed</th>
+      <td>0.045740</td>
       <td>0.017622</td>
       <td>0.032125</td>
       <td>-0.004309</td>
@@ -26343,7 +26402,6 @@ div#notebook {
       <td>0.088571</td>
       <td>-0.008258</td>
       <td>-0.017125</td>
-      <td>0.009771</td>
       <td>...</td>
       <td>-0.001941</td>
       <td>-0.001372</td>
@@ -26358,6 +26416,7 @@ div#notebook {
     </tr>
     <tr>
       <th>SaleCondition_AdjLand</th>
+      <td>-0.034852</td>
       <td>-0.037451</td>
       <td>-0.014533</td>
       <td>-0.006098</td>
@@ -26367,7 +26426,6 @@ div#notebook {
       <td>-0.016173</td>
       <td>0.182202</td>
       <td>-0.034618</td>
-      <td>-0.092426</td>
       <td>...</td>
       <td>-0.002747</td>
       <td>-0.001941</td>
@@ -26382,6 +26440,7 @@ div#notebook {
     </tr>
     <tr>
       <th>SaleCondition_Alloca</th>
+      <td>-0.009018</td>
       <td>0.068107</td>
       <td>-0.020234</td>
       <td>-0.010591</td>
@@ -26391,7 +26450,6 @@ div#notebook {
       <td>0.194292</td>
       <td>-0.020297</td>
       <td>-0.059130</td>
-      <td>-0.006741</td>
       <td>...</td>
       <td>-0.004772</td>
       <td>-0.003372</td>
@@ -26406,6 +26464,7 @@ div#notebook {
     </tr>
     <tr>
       <th>SaleCondition_Family</th>
+      <td>0.004865</td>
       <td>0.021949</td>
       <td>-0.027180</td>
       <td>-0.013711</td>
@@ -26415,7 +26474,6 @@ div#notebook {
       <td>-0.018183</td>
       <td>0.039116</td>
       <td>0.021534</td>
-      <td>-0.016691</td>
       <td>...</td>
       <td>0.106555</td>
       <td>-0.004365</td>
@@ -26430,6 +26488,7 @@ div#notebook {
     </tr>
     <tr>
       <th>SaleCondition_Normal</th>
+      <td>0.015881</td>
       <td>-0.158772</td>
       <td>0.031766</td>
       <td>-0.009177</td>
@@ -26439,7 +26498,6 @@ div#notebook {
       <td>-0.022306</td>
       <td>-0.034388</td>
       <td>-0.153930</td>
-      <td>-0.014821</td>
       <td>...</td>
       <td>-0.043784</td>
       <td>0.017320</td>
@@ -26454,6 +26512,7 @@ div#notebook {
     </tr>
     <tr>
       <th>SaleCondition_Partial</th>
+      <td>-0.020738</td>
       <td>0.221037</td>
       <td>0.004852</td>
       <td>0.018526</td>
@@ -26463,7 +26522,6 @@ div#notebook {
       <td>-0.004721</td>
       <td>-0.022949</td>
       <td>0.249315</td>
-      <td>0.080725</td>
       <td>...</td>
       <td>-0.016038</td>
       <td>-0.011333</td>
@@ -26478,6 +26536,7 @@ div#notebook {
     </tr>
     <tr>
       <th>SaleType_CWD</th>
+      <td>0.021204</td>
       <td>0.033381</td>
       <td>0.007628</td>
       <td>-0.006098</td>
@@ -26487,7 +26546,6 @@ div#notebook {
       <td>-0.016173</td>
       <td>0.036786</td>
       <td>-0.028685</td>
-      <td>-0.039299</td>
       <td>...</td>
       <td>1.000000</td>
       <td>-0.001941</td>
@@ -26502,6 +26560,7 @@ div#notebook {
     </tr>
     <tr>
       <th>SaleType_Con</th>
+      <td>-0.016301</td>
       <td>0.007559</td>
       <td>0.003778</td>
       <td>-0.004309</td>
@@ -26511,7 +26570,6 @@ div#notebook {
       <td>0.088571</td>
       <td>-0.008258</td>
       <td>-0.012681</td>
-      <td>0.009771</td>
       <td>...</td>
       <td>-0.001941</td>
       <td>1.000000</td>
@@ -26526,6 +26584,7 @@ div#notebook {
     </tr>
     <tr>
       <th>SaleType_ConLD</th>
+      <td>-0.004412</td>
       <td>-0.011789</td>
       <td>-0.018808</td>
       <td>-0.009162</td>
@@ -26535,7 +26594,6 @@ div#notebook {
       <td>-0.014176</td>
       <td>-0.017560</td>
       <td>-0.000835</td>
-      <td>-0.085660</td>
       <td>...</td>
       <td>-0.004128</td>
       <td>-0.002917</td>
@@ -26550,6 +26608,7 @@ div#notebook {
     </tr>
     <tr>
       <th>SaleType_ConLI</th>
+      <td>-0.058765</td>
       <td>0.006094</td>
       <td>0.016175</td>
       <td>-0.006820</td>
@@ -26559,7 +26618,6 @@ div#notebook {
       <td>-0.004522</td>
       <td>-0.013070</td>
       <td>0.001853</td>
-      <td>0.015465</td>
       <td>...</td>
       <td>-0.003073</td>
       <td>-0.002171</td>
@@ -26574,6 +26632,7 @@ div#notebook {
     </tr>
     <tr>
       <th>SaleType_ConLw</th>
+      <td>-0.020738</td>
       <td>-0.043721</td>
       <td>0.012602</td>
       <td>-0.006820</td>
@@ -26583,7 +26642,6 @@ div#notebook {
       <td>-0.004522</td>
       <td>0.030299</td>
       <td>-0.033900</td>
-      <td>-0.079604</td>
       <td>...</td>
       <td>-0.003073</td>
       <td>-0.002171</td>
@@ -26598,6 +26656,7 @@ div#notebook {
     </tr>
     <tr>
       <th>SaleType_New</th>
+      <td>-0.018998</td>
       <td>0.221219</td>
       <td>0.010810</td>
       <td>0.019596</td>
@@ -26607,7 +26666,6 @@ div#notebook {
       <td>-0.014893</td>
       <td>-0.021547</td>
       <td>0.249236</td>
-      <td>0.079661</td>
       <td>...</td>
       <td>-0.015827</td>
       <td>-0.011184</td>
@@ -26622,6 +26680,7 @@ div#notebook {
     </tr>
     <tr>
       <th>SaleType_Oth</th>
+      <td>0.038920</td>
       <td>-0.008215</td>
       <td>-0.036082</td>
       <td>-0.005279</td>
@@ -26631,7 +26690,6 @@ div#notebook {
       <td>0.061841</td>
       <td>-0.010117</td>
       <td>-0.002593</td>
-      <td>0.011971</td>
       <td>...</td>
       <td>-0.002378</td>
       <td>-0.001681</td>
@@ -26646,6 +26704,7 @@ div#notebook {
     </tr>
     <tr>
       <th>SaleType_WD</th>
+      <td>0.026133</td>
       <td>-0.198056</td>
       <td>0.026769</td>
       <td>-0.014211</td>
@@ -26655,7 +26714,6 @@ div#notebook {
       <td>0.015132</td>
       <td>0.012215</td>
       <td>-0.198960</td>
-      <td>-0.037373</td>
       <td>...</td>
       <td>-0.134295</td>
       <td>-0.094896</td>
@@ -26670,6 +26728,7 @@ div#notebook {
     </tr>
     <tr>
       <th>Street_Pave</th>
+      <td>0.008916</td>
       <td>0.005950</td>
       <td>0.046983</td>
       <td>0.007473</td>
@@ -26679,7 +26738,6 @@ div#notebook {
       <td>-0.071029</td>
       <td>0.014323</td>
       <td>0.035229</td>
-      <td>0.069869</td>
       <td>...</td>
       <td>0.003367</td>
       <td>0.002379</td>
@@ -26694,6 +26752,7 @@ div#notebook {
     </tr>
     <tr>
       <th>Utilities_NoSeWa</th>
+      <td>0.013324</td>
       <td>0.012287</td>
       <td>-0.020818</td>
       <td>-0.003046</td>
@@ -26703,7 +26762,6 @@ div#notebook {
       <td>-0.018176</td>
       <td>0.091007</td>
       <td>-0.012639</td>
-      <td>0.006907</td>
       <td>...</td>
       <td>-0.001372</td>
       <td>-0.000970</td>
@@ -26718,7 +26776,7 @@ div#notebook {
     </tr>
   </tbody>
 </table>
-<p>242 rows × 242 columns</p>
+<p>239 rows × 239 columns</p>
 </div>
 </div>
 
@@ -26787,7 +26845,7 @@ div#notebook {
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>((1460, 241), (1460, 1))</pre>
+<pre>((1460, 238), (1460, 1))</pre>
 </div>
 
 </div>
@@ -26801,7 +26859,7 @@ div#notebook {
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>In order to train the dataset wemust split it to the  train and test. By training this dataset it allows for the prediction of the test dataset.</strong></p>
+<p><strong>In order to train the dataset we must split it to the  train and test. By training this dataset it allows for the prediction of the test dataset.</strong></p>
 
 </div>
 </div>
@@ -26859,8 +26917,8 @@ div#notebook {
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 Int64Index: 730 entries, 854 to 294
-Columns: 241 entries, 1stFlrSF to Utilities_NoSeWa
-dtypes: float64(11), int64(230)
+Columns: 238 entries, Unnamed: 0 to Utilities_NoSeWa
+dtypes: float64(11), int64(227)
 memory usage: 1.3 MB
 </pre>
 </div>
@@ -26875,7 +26933,8 @@ memory usage: 1.3 MB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<h3 id="Mulitple-algorithms">Mulitple algorithms<a class="anchor-link" href="#Mulitple-algorithms">&#182;</a></h3><p>I tested mulitple algorthms to determine the best one for the prediction.</p>
+<h3 id="Mulitple-algorithms">Mulitple algorithms<a class="anchor-link" href="#Mulitple-algorithms">&#182;</a></h3><p><strong>I tested mulitple algorthms to determine the best one for the prediction.</strong></p>
+<p><strong> Gradient Boosting Regressor gave me the best outcome. This data set is given a score based on mean_squared_error. </strong></p>
 
 </div>
 </div>
@@ -26936,7 +26995,7 @@ memory usage: 1.3 MB
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.88095575779064661</pre>
+<pre>0.88411839083220334</pre>
 </div>
 
 </div>
@@ -26967,7 +27026,7 @@ memory usage: 1.3 MB
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>28038.6258723459</pre>
+<pre>27663.669473998652</pre>
 </div>
 
 </div>
@@ -27032,7 +27091,7 @@ memory usage: 1.3 MB
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.84448231320290656</pre>
+<pre>0.85146628134550051</pre>
 </div>
 
 </div>
@@ -27063,7 +27122,7 @@ memory usage: 1.3 MB
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>32047.372048802536</pre>
+<pre>31319.516964027836</pre>
 </div>
 
 </div>
@@ -27100,7 +27159,7 @@ memory usage: 1.3 MB
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>-568456850.86376715</pre>
+<pre>0.46753303393789652</pre>
 </div>
 
 </div>
@@ -27132,8 +27191,8 @@ memory usage: 1.3 MB
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stdout output_text">
-<pre>(&#39;RMSE for the training data is: &#39;, 1937545677.1660187)
-(&#39;RMSE for the testing data is: &#39;, 1937542694.5464532)
+<pre>(&#39;RMSE for the training data is: &#39;, 120813.33103444456)
+(&#39;RMSE for the testing data is: &#39;, 59299.203925720991)
 </pre>
 </div>
 </div>
@@ -27141,16 +27200,6 @@ memory usage: 1.3 MB
 </div>
 </div>
 
-</div>
-<div class="cell border-box-sizing text_cell rendered">
-<div class="prompt input_prompt">
-</div>
-<div class="inner_cell">
-<div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>I included Ridge and Lasso Regression so see the score, but this project is meant for a more linear algorithm.</strong></p>
-
-</div>
-</div>
 </div>
 <div class="cell border-box-sizing code_cell rendered">
 <div class="input">
@@ -27178,7 +27227,7 @@ memory usage: 1.3 MB
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.79915526382634638</pre>
+<pre>0.8003304183779677</pre>
 </div>
 
 </div>
@@ -27209,7 +27258,7 @@ memory usage: 1.3 MB
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>36419.397377775676</pre>
+<pre>36312.695033308381</pre>
 </div>
 
 </div>
@@ -27254,7 +27303,7 @@ memory usage: 1.3 MB
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.47237620229488153</pre>
+<pre>0.47788228851462045</pre>
 </div>
 
 </div>
@@ -27285,7 +27334,7 @@ memory usage: 1.3 MB
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>59028.903515732716</pre>
+<pre>58720.093877565974</pre>
 </div>
 
 </div>
@@ -27382,7 +27431,7 @@ memory usage: 1.3 MB
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>((730, 241), (730, 241), (730, 1), (730, 1))</pre>
+<pre>((730, 238), (730, 238), (730, 1), (730, 1))</pre>
 </div>
 
 </div>
@@ -27418,7 +27467,7 @@ memory usage: 1.3 MB
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>0.95753424657534247</pre>
+<pre>0.96986301369863015</pre>
 </div>
 
 </div>
@@ -27449,7 +27498,7 @@ memory usage: 1.3 MB
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>115736.53095887451</pre>
+<pre>115832.33251527298</pre>
 </div>
 
 </div>
@@ -27463,7 +27512,7 @@ memory usage: 1.3 MB
 </div>
 <div class="inner_cell">
 <div class="text_cell_render border-box-sizing rendered_html">
-<p><strong>I did at one point I tried stacking(where we used muliple algorithm to find a better prediction. You add each prediction into into own column and then use an agorithm to find the final prediction.), but I got a better prediction with a simple Logistic Regression.</strong></p>
+<p><strong>I did at one point I tried stacking(where we used muliple algorithm to find a better prediction. You add each prediction into into own column and then use an agorithm to find the final prediction.), but I got a better prediction with a simple Gradient Boosting Regressor.</strong></p>
 
 </div>
 </div>
@@ -27476,7 +27525,6 @@ memory usage: 1.3 MB
 <div class=" highlight hl-ipython2"><pre><span></span><span class="n">test</span> <span class="o">=</span> <span class="n">pd</span><span class="o">.</span><span class="n">read_csv</span><span class="p">(</span><span class="s1">&#39;test_data.csv&#39;</span><span class="p">)</span>
 <span class="n">test</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
 <span class="n">test</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">fillna</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
-<span class="n">test</span> <span class="o">=</span><span class="n">test</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Unnamed: 0&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">testfinal</span> <span class="o">=</span> <span class="n">test</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;Id&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
 <span class="n">testfinal</span> <span class="o">=</span> <span class="n">testfinal</span><span class="o">.</span><span class="n">drop</span><span class="p">(</span><span class="s1">&#39;SalePrice&#39;</span><span class="p">,</span><span class="mi">1</span><span class="p">)</span>
 <span class="n">testfinal</span><span class="o">.</span><span class="n">info</span><span class="p">()</span>
@@ -27496,14 +27544,14 @@ memory usage: 1.3 MB
 <div class="output_subarea output_stream output_stdout output_text">
 <pre>&lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 RangeIndex: 1459 entries, 0 to 1458
-Columns: 244 entries, Unnamed: 0 to Utilities_NoSeWa
-dtypes: float64(12), int64(232)
+Columns: 240 entries, Unnamed: 0 to Utilities_NoSeWa
+dtypes: float64(12), int64(228)
 memory usage: 2.7 MB
 &lt;class &#39;pandas.core.frame.DataFrame&#39;&gt;
 RangeIndex: 1459 entries, 0 to 1458
-Columns: 241 entries, 1stFlrSF to Utilities_NoSeWa
-dtypes: float64(11), int64(230)
-memory usage: 2.7 MB
+Columns: 238 entries, Unnamed: 0 to Utilities_NoSeWa
+dtypes: float64(11), int64(227)
+memory usage: 2.6 MB
 </pre>
 </div>
 </div>
@@ -27544,7 +27592,7 @@ memory usage: 2.7 MB
 
 
 <div class="output_text output_subarea output_execute_result">
-<pre>((1459, 241), (730, 241))</pre>
+<pre>((1459, 238), (730, 238))</pre>
 </div>
 
 </div>
@@ -27592,6 +27640,7 @@ memory usage: 2.7 MB
   <thead>
     <tr style="text-align: right;">
       <th></th>
+      <th>Unnamed: 0</th>
       <th>1stFlrSF</th>
       <th>2ndFlrSF</th>
       <th>3SsnPorch</th>
@@ -27601,7 +27650,6 @@ memory usage: 2.7 MB
       <th>BsmtFullBath</th>
       <th>BsmtHalfBath</th>
       <th>BsmtUnfSF</th>
-      <th>CentralAir</th>
       <th>...</th>
       <th>SaleType_CWD</th>
       <th>SaleType_Con</th>
@@ -27618,6 +27666,7 @@ memory usage: 2.7 MB
   <tbody>
     <tr>
       <th>0</th>
+      <td>0</td>
       <td>896</td>
       <td>0</td>
       <td>0</td>
@@ -27627,7 +27676,6 @@ memory usage: 2.7 MB
       <td>0.0</td>
       <td>0.0</td>
       <td>270.0</td>
-      <td>1</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -27642,6 +27690,7 @@ memory usage: 2.7 MB
     </tr>
     <tr>
       <th>1</th>
+      <td>1</td>
       <td>1329</td>
       <td>0</td>
       <td>0</td>
@@ -27651,7 +27700,6 @@ memory usage: 2.7 MB
       <td>0.0</td>
       <td>0.0</td>
       <td>406.0</td>
-      <td>1</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -27666,6 +27714,7 @@ memory usage: 2.7 MB
     </tr>
     <tr>
       <th>2</th>
+      <td>2</td>
       <td>928</td>
       <td>701</td>
       <td>0</td>
@@ -27675,7 +27724,6 @@ memory usage: 2.7 MB
       <td>0.0</td>
       <td>0.0</td>
       <td>137.0</td>
-      <td>1</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -27690,6 +27738,7 @@ memory usage: 2.7 MB
     </tr>
     <tr>
       <th>3</th>
+      <td>3</td>
       <td>926</td>
       <td>678</td>
       <td>0</td>
@@ -27699,7 +27748,6 @@ memory usage: 2.7 MB
       <td>0.0</td>
       <td>0.0</td>
       <td>324.0</td>
-      <td>1</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -27714,6 +27762,7 @@ memory usage: 2.7 MB
     </tr>
     <tr>
       <th>4</th>
+      <td>4</td>
       <td>1280</td>
       <td>0</td>
       <td>0</td>
@@ -27723,7 +27772,6 @@ memory usage: 2.7 MB
       <td>0.0</td>
       <td>0.0</td>
       <td>1017.0</td>
-      <td>1</td>
       <td>...</td>
       <td>0</td>
       <td>0</td>
@@ -27738,7 +27786,7 @@ memory usage: 2.7 MB
     </tr>
   </tbody>
 </table>
-<p>5 rows × 241 columns</p>
+<p>5 rows × 238 columns</p>
 </div>
 </div>
 
@@ -27763,7 +27811,7 @@ memory usage: 2.7 MB
 <div class="prompt input_prompt">In&nbsp;[26]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">final</span> <span class="o">=</span> <span class="n">logistic</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">testfinal</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">final</span> <span class="o">=</span> <span class="n">clf</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">testfinal</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -27844,7 +27892,7 @@ memory usage: 2.7 MB
 <div class="prompt"></div>
 
 <div class="output_subarea output_stream output_stderr output_text">
-<pre>/Users/YannellySanchez/anaconda/lib/python2.7/site-packages/ipykernel/__main__.py:1: SettingWithCopyWarning: 
+<pre>/Users/YannellySanchez/anaconda/lib/python2.7/site-packages/ipykernel/__main__.py:1: SettingWithCopyWarning:
 A value is trying to be set on a copy of a slice from a DataFrame.
 Try using .loc[row_indexer,col_indexer] = value instead
 
@@ -27885,27 +27933,27 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
     <tr>
       <th>0</th>
       <td>1461</td>
-      <td>129000.0</td>
+      <td>124564.125707</td>
     </tr>
     <tr>
       <th>1</th>
       <td>1462</td>
-      <td>128950.0</td>
+      <td>156466.375735</td>
     </tr>
     <tr>
       <th>2</th>
       <td>1463</td>
-      <td>175000.0</td>
+      <td>173847.746573</td>
     </tr>
     <tr>
       <th>3</th>
       <td>1464</td>
-      <td>215000.0</td>
+      <td>175868.808794</td>
     </tr>
     <tr>
       <th>4</th>
       <td>1465</td>
-      <td>245500.0</td>
+      <td>198066.682762</td>
     </tr>
   </tbody>
 </table>
@@ -27933,7 +27981,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
 <div class="prompt input_prompt">In&nbsp;[29]:</div>
 <div class="inner_cell">
     <div class="input_area">
-<div class=" highlight hl-ipython2"><pre><span></span><span class="n">finaloutput</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;/Users/YannellySanchez/Google Drive/finaloutput.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
+<div class=" highlight hl-ipython2"><pre><span></span><span class="n">finaloutput</span><span class="o">.</span><span class="n">to_csv</span><span class="p">(</span><span class="s1">&#39;finaloutput.csv&#39;</span><span class="p">,</span> <span class="n">index</span><span class="o">=</span><span class="bp">False</span><span class="p">)</span>
 </pre></div>
 
 </div>
@@ -27945,7 +27993,7 @@ See the caveats in the documentation: http://pandas.pydata.org/pandas-docs/stabl
   </div>
 </body>
 
- 
+
 
 
 </html>
