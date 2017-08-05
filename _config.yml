@@ -6,6 +6,7 @@ baseurl: "" # the subpath of your site, e.g. /blog/
 url: "ysanchez.github.io" # the base hostname & protocol for your site
 facebook_username: yannelly.sanchez
 github_username:  ysanchez
+linkedin_username:    yannelly-sanchez-a923a237
 
 
 # Build settings
