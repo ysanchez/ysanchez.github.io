@@ -3,46 +3,56 @@ layout: post
 title: "Resume"
 ---
 
-**Yannelly Sanchez**       
-yannelly.sanchez389@gmail.com
+##Yannelly Sanchez
+
+yannelly.sanchez389@gmail.com | ysanchez.github.io | www.linkedin.com/in/yannelly-sanchez-a923a237
+
+####Profile
+
+An experienced Analyst with a M.A. in Forensic Psychology.  My skills range from intensive Python and real world experience in Real Estate. In the last couple years, I have also gained comparable experience in Analytics by working at a financial company that specializes in global money wires transfers.  Independently, I have broadened my knowledge and skills with data science projects such as Advanced Regression.
 
 
-**Skills**
-* Python 2.7 and 3
-*	Data Science
-*	Github
-*	Data Analysis
-*	Cleaning Data
-*	Data Engineering
-*	Working with Structured and unstructured data
-*	Predictive Modeling
-*	Machine Learning Algorithm
-*	Data Mining
+####Technical Skills
 
-**Experience**
-December 2015 - PRESENT
-Ria Financial - Buena Park, CA – Pricing Analyst
-*	Make decisions for pricing based on data analysis.
-*	Trend analysis to determine how to move forward.
-*	Investigative Analysis.
-*	Use python to assist with data analysis.
-*	Data Interpretation.
+**Natural Language Processing**: Tweepy, Twython, textblob, NLTK
 
-December 2014 – November 2015
-Horsemen Investigations - Huntington Beach, CA – Statement Investigator
-*	Achieved detailed written reports in regards to my findings in the field, which allowed the insurance company to make a decision based on the findings.
-*	Achieved detailed statements of witnesses and claimants to obtain more information pertaining to a case.
-*	Gathered additional information from the information already given and previously gathered.
+**Machine Learning**: classification, regression, clustering, feature engineering
 
-November 2011 – November 2014
-Regional Center of Orange County - Santa Ana, CA – Service Coordinator
-*	Spearheaded collaboration with a wide range of professional teams to insure the best outcome for clients.
-*	Utilized detailed reports, written by myself, to implement appropriate services for clients.
-*	Successfully managed a caseload of 105+ persons with developmental disabilities.
+**Statistical Methods**: time series, regression models
 
-**Education**
-Python for Data Science – Dev Masters – Irvine, CA – 2017- present
-CCIA, Crime and Intelligence Analysis Certification- California State University, Fullerton- 2014 -present
-M.A., Forensic Psychology - Argosy University  (2010)
-B.A., Psychology with a Minor in Anthropology – University of California, Irvine (2009)
-International Studies Abroad - Universidad Complutense de Madrid (9/2007-6/2008)
+**Software and Programming Languages**: Python (scikit-learn, numpy, scipy, pandas), Microsoft Excel, R, SparkTechnical
+
+
+####Experience- Projects
+
+**Housing Pricing (2017)**.  Advanced regression through Kaggle.com. It determines the price of a house in Iowa using Gradient Boosting.
+
+**Natural Language Processing (2017)**.  A Twitter project using Search API in one notebook and API steaming in another. Used textblob to classify each tweet as “positive”, “negative”, or “neutral”.
+
+**Loan Default (2017)**.  Classification model which predicted loan defaults.
+
+**Serial Killer Prediction (2017)**.  An FBI data set on Kaggle.com with 40 years of homicide data.  Using Seaborn and Matplotlib to determine who was a serial killer and who was not.
+
+
+####Employment
+
+**Pricing Analyst: Ria Financial				                	                                                   2015 - Present**
+Analyze data in geographical areas to determine what group agents should be placed, which makes each agent competitive and successful. Investigative Analysis to determine current market trends for emerging markets. Used Census Bureau data to create an ArcGIS map based on demographics of the nation, which the Sales team now uses for prospecting. Clean data for the Pricing team and other departments using Python.
+
+**Investigator: Horsemen Investigations					                                                                2014 - 2015**
+Investigated Workers Compensations claims by completing one on one interviews with employees and managers that worked directly the claimant. Wrote detailed reports based on finding and material provided by the employer.
+
+**Service Coordinator: Regional Center of Orange County			                                                     2009 - 2014**
+Managed a caseload of 100+ clients with developmental disabilities. Worked collaboratively with other departments and vendors to create a program that best met the needs to of the clients. An advocate for the clients and parents during Individualized Education Program meetings, Annual Reviews, and Planning Team Meetings.
+
+
+####Education
+
+**Dev Masters 					              	                                                           Winter 2017 - Summer 2017**
+Certificate - Python for Data Science
+
+**Argosy University	                                                                               Spring 2009 - Winter 2010**
+Master of Arts in Forensic Psychology
+
+**University of California, Irvine				                                                           Fall 2006 - Spring 2009**
+Bachelor of Arts in Psychology
