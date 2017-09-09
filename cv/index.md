@@ -7,9 +7,13 @@ title: "Resume"
 
 yannelly.sanchez389@gmail.com | ysanchez.github.io | www.linkedin.com/in/yannelly-sanchez-a923a237
 
+
+
 ### Profile
 
 An experienced Analyst with a M.A. in Forensic Psychology.  My skills range from intensive Python and real world experience in Real Estate. In the last couple years, I have also gained comparable experience in Analytics by working at a financial company that specializes in global money wires transfers.  Independently, I have broadened my knowledge and skills with data science projects such as Advanced Regression.
+
+
 
 
 ### Technical Skills
@@ -23,6 +27,8 @@ An experienced Analyst with a M.A. in Forensic Psychology.  My skills range from
 **Software and Programming Languages**: Python (scikit-learn, numpy, scipy, pandas), Microsoft Excel, R, SparkTechnical
 
 
+
+
 ### Experience- Projects
 
 **Housing Pricing (2017)**.  Advanced regression through Kaggle.com. It determines the price of a house in Iowa using Gradient Boosting.
@@ -32,6 +38,8 @@ An experienced Analyst with a M.A. in Forensic Psychology.  My skills range from
 **Loan Default (2017)**.  Classification model which predicted loan defaults.
 
 **Serial Killer Prediction (2017)**.  An FBI data set on Kaggle.com with 40 years of homicide data.  Using Seaborn and Matplotlib to determine who was a serial killer and who was not.
+
+
 
 
 ### Employment
@@ -49,6 +57,8 @@ Investigated Workers Compensations claims by completing one on one interviews wi
 Managed a caseload of 100+ clients with developmental disabilities. Worked collaboratively with other departments and vendors to create a program that best met the needs to of the clients. An advocate for the clients and parents during Individualized Education Program meetings, Annual Reviews, and Planning Team Meetings.
 
 
+
+  
 ### Education
 
 **Dev Masters 					           
