@@ -58,7 +58,7 @@ Managed a caseload of 100+ clients with developmental disabilities. Worked colla
 
 
 
-  
+    
 ### Education
 
 **Dev Masters 					           
