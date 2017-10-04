@@ -24,7 +24,7 @@ An experienced Analyst with a M.A. in Forensic Psychology.  My skills range from
 
 **Statistical Methods**: time series, regression models
 
-**Software and Programming Languages**: Python (scikit-learn, numpy, scipy, pandas), Microsoft Excel, R, SparkTechnical
+**Software and Programming Languages**: Python (scikit-learn, numpy, scipy, pandas), Microsoft Excel, R, SparkTechnical, SQL
 
 
 
