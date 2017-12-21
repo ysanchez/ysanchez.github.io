@@ -11,7 +11,7 @@ yannelly.sanchez389@gmail.com | ysanchez.github.io | www.linkedin.com/in/yannell
 
 ### Profile
 
-An experienced Analyst with a M.A. in Forensic Psychology.  My skills range from intensive Python and real world experience in Real Estate. In the last couple years, I have also gained comparable experience in Analytics by working at a financial company that specializes in global money wires transfers.  Independently, I have broadened my knowledge and skills with data science projects such as Advanced Regression.
+An experienced Analyst with a M.A. in Forensic Psychology.  My skills range from intensive Python and real world experience in  Data Analysis and Real Estate. In the last couple years I have also gained comparable experience in Analytics by working at a financial company that specializes in global money wires transfers.  Independently, I have broaden my knowledge and skills in  data science by participating in Kaggle competitions and creating solutions for my current employer. 
 
 
 
@@ -24,7 +24,7 @@ An experienced Analyst with a M.A. in Forensic Psychology.  My skills range from
 
 **Statistical Methods**: time series, regression models
 
-**Software and Programming Languages**: Python (scikit-learn, numpy, scipy, pandas), Microsoft Excel, R, SparkTechnical
+**Software and Programming Languages**: Python (scikit-learn, numpy, scipy, pandas), Microsoft Excel, R, SparkTechnical, Spark, Splunk
 
 
 
@@ -46,7 +46,11 @@ An experienced Analyst with a M.A. in Forensic Psychology.  My skills range from
 
 **Pricing Analyst: Ria Financial	   
 2015 - Present**    
-Analyze data in geographical areas to determine what group agents should be placed, which makes each agent competitive and successful. Investigative Analysis to determine current market trends for emerging markets. Used Census Bureau data to create an ArcGIS map based on demographics of the nation, which the Sales team now uses for prospecting. Clean data for the Pricing team and other departments using Python.
+Analyze data in geographical areas to determine what group agents should be placed, which makes each agent competitive and successful. Investigative Analysis to determine current market trends for emerging markets. Used Census Bureau data to create an ArcGIS map based on demographics of the nation, which the Sales team now uses for prospecting. Clean data for the Pricing team and other departments using Python and Excel.
+
+**Licensed Realtor: First Team Real Estate					   	    
+2016 - Present**  
+Provide professional Real Estate services to home buyers and sellers in and around the Orange County Area.
 
 **Investigator: Horsemen Investigations	  
 2014 - 2015**  
@@ -58,7 +62,7 @@ Managed a caseload of 100+ clients with developmental disabilities. Worked colla
 
 
 
-    
+
 ### Education
 
 **Dev Masters 					           
