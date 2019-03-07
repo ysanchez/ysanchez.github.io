@@ -3,11 +3,11 @@ layout: post
 title: "Resume"
 ---
 
-# Yannelly Sanchez
+#### Yannelly Sanchez
 
 
 yannelly.sanchez389@gmail.com  
-ysanchez.github.io
+ysanchez.github.io         
 www.linkedin.com/in/yannelly-sanchez-a923a237
 
 
