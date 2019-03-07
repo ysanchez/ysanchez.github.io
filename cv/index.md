@@ -3,7 +3,7 @@ layout: post
 title: "Resume"
 ---
 
-#### Yannelly Sanchez
+# Yannelly Sanchez
 
 
  yannelly.sanchez389@gmail.com                                                    
