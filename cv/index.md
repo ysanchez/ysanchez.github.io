@@ -5,7 +5,8 @@ title: "Resume"
 
 ## Yannelly Sanchez
 
-yannelly.sanchez389@gmail.com | ysanchez.github.io | www.linkedin.com/in/yannelly-sanchez-a923a237
+ yannelly.sanchez389@gmail.com                                                    ysanchez.github.io 
+ www.linkedin.com/in/yannelly-sanchez-a923a237
 
 
 
